@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>commit-garden — grow a garden from your git history</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>commit-garden</h1>
+    <p class="tagline">Every commit is a plant. Tend your repo's history.</p>
+    <form id="repo-form">
+      <input
+        id="repo-input"
+        type="text"
+        placeholder="owner/repo — e.g. torvalds/linux"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button type="submit">Plant</button>
+    </form>
+    <button id="sample-btn" type="button">or plant a sample garden</button>
+  </header>
+
+  <main>
+    <section id="garden-wrap" aria-label="commit garden">
+      <div id="ground"></div>
+      <div id="sky"></div>
+    </section>
+
+    <aside id="panel" hidden>
+      <button id="panel-close" aria-label="close">×</button>
+      <div id="panel-content"></div>
+    </aside>
+  </main>
+
+  <footer>
+    <p>
+      Messages starting with <code>fix</code> grow flowers, <code>feat</code> grow trees,
+      <code>docs</code> grow ferns, and everything else grows moss &amp; mushrooms.
+      Merge commits become oaks. Click any plant to inspect the commit.
+    </p>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

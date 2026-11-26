@@ -1,0 +1,11 @@
+{
+  "name": "commit-garden",
+  "version": "0.1.0",
+  "description": "Grow a garden from your git history. Every commit is a plant.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "license": "MIT"
+}
